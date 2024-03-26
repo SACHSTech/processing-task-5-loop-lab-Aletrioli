@@ -16,7 +16,7 @@ public class Sketch extends PApplet {
    * values here i.e background, stroke, fill etc.
    */
   public void setup() {
-    background(45, 150, 207);
+    background(93, 138, 168);
   }
 
   /**
@@ -74,12 +74,12 @@ public class Sketch extends PApplet {
     int intX = 0;
     int intY = 0;
 
-    for(int intRow = 0; intRow < 30; intRow++){
-      for(int intColumn = 0; intColumn < 30; intColumn++){
-        intX = 3 + 0;  //Instead of zero, calculate the proper intX location using 'intRow'
-        intY = 300 + 3 + 0; //Instead of zero, calculate the proper intY location using 'intColumn'
-
+    for(int intRow = 0; intRow < 300; intRow += 10){
+      for(int intColumn = 0; intColumn < 300; intColumn += 10){
         fill(255);
+        intX = 1 + intRow;  //Instead of zero, calculate the proper intX location using 'intRow'
+        intY = 1 + 300 + intColumn; //Instead of zero, calculate the proper intY location using 'intColumn'
+
         noStroke();
         rect(intX, intY, 5, 5);
 
