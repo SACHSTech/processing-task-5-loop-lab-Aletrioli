@@ -71,6 +71,7 @@ public class Sketch extends PApplet {
    * draws the bottom left section
    */
   public void draw_section1(){
+   
     int intX = 0;
     int intY = 0;
 
@@ -85,13 +86,36 @@ public class Sketch extends PApplet {
 
       }
     }
+
   }
 
   /**
    * Use the modulus operator and an if statement to select the color
    * Don't loop from 30 to 60 to shift everything over, just add 300 to x.
    */
+
   public void draw_section2(){
+
+    int intX = 0;
+    int intY = 0;
+
+    for(int intRow = 0; intRow < 300; intRow += 10){
+      for(int intColumn = 0; intColumn < 300; intColumn += 10){
+        
+        if(intRow % 20 == 0){
+          fill(255);
+        } else {
+          fill(0);
+        }
+        
+        intX = 1 + 300 + intRow;  //Instead of zero, calculate the proper intX location using 'intRow'
+        intY = 1 + 300 + intColumn; //Instead of zero, calculate the proper intY location using 'intColumn'
+
+        noStroke();
+        rect(intX, intY, 5, 5);
+
+      }
+    }
 
   }
 
@@ -100,6 +124,27 @@ public class Sketch extends PApplet {
    * Don't use multiple 'if' statements.
    */
   public void draw_section3(){
+
+    int intX = 0;
+    int intY = 0;
+
+    for(int intRow = 0; intRow < 300; intRow += 10){
+      for(int intColumn = 0; intColumn < 300; intColumn += 10){
+        
+        if(intColumn % 20 == 0){
+          fill(255);
+        } else {
+          fill(0);
+        }
+        
+        intX = 1 + 600 + intRow;  //Instead of zero, calculate the proper intX location using 'intRow'
+        intY = 1 + 300 + intColumn; //Instead of zero, calculate the proper intY location using 'intColumn'
+
+        noStroke();
+        rect(intX, intY, 5, 5);
+
+      }
+    }
 
   }
 
